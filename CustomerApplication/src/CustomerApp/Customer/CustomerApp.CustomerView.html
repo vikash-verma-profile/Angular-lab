@@ -3,12 +3,10 @@
 Customer Code<input formControlName="CustomerNameControl" [(ngModel)]="CustomerModel.CustomerCode" type="text"><br /><br />
 Customer Name<input formControlName="CustomerCodeControl" [(ngModel)]="CustomerModel.CustomerName" type="text"><br /><br />
 Customer Amount<input [ngModelOptions]="{standalone:true}" [(ngModel)]="CustomerModel.CustomerAmount" type="text"><br />
-<input [disabled]="!(CustomerModel.formCutomerGroup.valid)"  type="button" value="Add" (click)=AddCustomer() /><br /><br />
+<input   type="button" value="Add" (click)=AddCustomer() /><br /><br />
 </form>
 
-<div  *ngIf="CustomerModel.formCutomerGroup.dirty"
-[hidden]="!(hasError('required','CustomerNameControl'))"
->
+<div  >
 Customer Name is required
 
   </div>
