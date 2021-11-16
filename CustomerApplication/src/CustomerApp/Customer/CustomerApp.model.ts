@@ -11,6 +11,9 @@ export class Customer{
         this.formCutomerGroup=_builder.group({});
         //control-->validations
         this.formCutomerGroup.addControl("CustomerNameControl",new FormControl('',Validators.required));
-        
+        var validatoncollection=[];
+        validatoncollection.push(Validators.required);
+       // validatoncollection.push(Validators.pattern("^[0-9]$"));
+        this.formCutomerGroup.addControl("CustomerCodeControl",new FormControl('',Validators.compose(validatoncollection)));
     }
 }

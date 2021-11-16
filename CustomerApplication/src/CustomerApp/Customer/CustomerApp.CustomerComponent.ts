@@ -21,4 +21,8 @@ export class CustomerComponent {
   DeleteCustomer(customer:Customer){
     this.CustomerModels=this.CustomerModels.filter(x=>x !=customer);
   }
+  hasError(typeofvalidator:string,controlname:string):boolean
+  {
+      return this.CustomerModel.formCutomerGroup.controls[controlname].hasError(typeofvalidator);
+  }
 }
