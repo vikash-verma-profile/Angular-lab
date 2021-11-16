@@ -6,6 +6,8 @@ import { RouterModule} from '@angular/router';
 import { CustomerRoutes } from '../Routing/CustomerApp.CustomerRouting';
 import { GridComponent } from '../Utility/CustomerApp.GridComponent';
 import { CustomerComponent } from './CustomerApp.CustomerComponent';
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,8 @@ import { CustomerComponent } from './CustomerApp.CustomerComponent';
     RouterModule.forChild(CustomerRoutes),
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [CustomerComponent]
