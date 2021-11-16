@@ -18,14 +18,15 @@ export class CustomerComponent {
 
   AddCustomer()
   {
-    if(this.CustomerModel.CustomerName===''){
-      this.CustomerModel.IsError=true;
-    }
-    else{
-      // this.CustomerModels.push(this.CustomerModel);
-      // this.CustomerModel=new Customer();
-      console.log("else");
-    }
+     this.CustomerModels.push(this.CustomerModel);
+    this.CustomerModel=new Customer();
+    // if(this.CustomerModel.CustomerName===''){
+    //   //this.CustomerModel.IsError=true;
+    // }
+    // else{
+     
+    //   console.log("else");
+    // }
     
   }
 
@@ -38,5 +39,9 @@ export class CustomerComponent {
   hasError(typeofvalidator:string,controlname:string):boolean
   {
       return this.CustomerModel.formCutomerGroup.controls[controlname].hasError(typeofvalidator);
+  }
+
+  SelectCustomer(_selected:Customer){
+    this.CustomerModel=_selected;
   }
 }

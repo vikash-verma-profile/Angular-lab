@@ -6,7 +6,7 @@ export class Customer{
     CustomerName:string="";
     CustomerAmount:number=0;
     formCutomerGroup: FormGroup;
-    IsError:boolean=false;
+    // IsError:boolean=false;
 
     constructor(){
         var _builder=new FormBuilder();

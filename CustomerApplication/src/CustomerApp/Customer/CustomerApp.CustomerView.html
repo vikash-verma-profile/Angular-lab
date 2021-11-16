@@ -11,19 +11,7 @@ Customer Name is required
 
   </div>
 
+<grid-ui [grid-columns]="[{'colName':'CustomerCode'},{'colName':'CustomerName'},{'colName':'CustomerAmount'}]" 
+[grid-data]="CustomerModels"  (grid-selected)="SelectCustomer($event)">
 
-<table border="2">
-  <tr>
-    <td>Customer Code</td>
-    <td>Customer Name</td>
-    <td>Customer Amount</td>
-    <td>Actions</td>
-    </tr>
-  <tr *ngFor="let cust of CustomerModels">
-    <td>{{cust.CustomerCode}}</td>
-    <td>{{cust.CustomerName}}</td>
-    <td>{{cust.CustomerAmount}}</td>
-    <td><input type="button" value="Edit" (click)=EditCustomer(cust)/></td>
-    <td><input type="button" value="Delete" (click)=DeleteCustomer(cust)/></td>
-  <tr>
-</table>
+  </grid-ui>

@@ -4,11 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule} from '@angular/router';
 import { CustomerRoutes } from '../Routing/CustomerApp.CustomerRouting';
+import { GridComponent } from '../Utility/CustomerApp.GridComponent';
 import { CustomerComponent } from './CustomerApp.CustomerComponent';
 
 @NgModule({
   declarations: [
-    CustomerComponent
+    CustomerComponent,GridComponent
   ],
   imports: [
     RouterModule.forChild(CustomerRoutes),
